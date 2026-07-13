@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEALED - Send a note in an evelope</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Courier+Prime:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel= "stylesheet" href= "style.css">
+</head>
+<body>
+
+    <div class="stage">
+        <p class="eyebrow " id=" eyebrow"> Sealed</p>
+
+        <div id="compose-view">
+            <div class="envelope">
+            <h1 class="title">Write a note and seal it</h1>
+            <p class="sub">just copy the link and send it to your person - the message lives in the address itself. It stays between you and the recipient.</p>
+
+            <div class= "field">
+            <label for= "from">From (optional)</label>
+            <input type= "text" id="from" placeholder="A coworker, a stranger, future you....">
+            </div>
+
+            <div class="field">
+                <label for="message"> Your message</label>
+                <textarea id= "message" placeholder = "Write your message here"></textarea>
+            </div>
+            
+            <div class="seal-row">
+                <button class="seal" id="seal-btn"> Seal it</button>
+            </div>
+
+            <div class= "result" id= "result">
+                <label>Share this link</label>
+                <div class= "link-box">
+                    <input type="text" id="link-output" readonly>
+                    <button class="copy-btn" id="copy-btn">Copy</button>
+                </div>
+                <p class="hint"> Anyone who opens it sees the note unwarp. The message doesn't get stored anywhere.</p>
+            </div>
+            <p class="maker-credit">Made by <a href="https://instagram.com/Chalimuss18" target="_blank" rel="noopener">BlinklessBloom</a></p>
+        </div>
+    </div>
+    <div id="reveal-view" style="display: none;">
+        <div class="envelope">
+            <div class="postmark" id= "postmark"><span>Delivered <br> by link</span></div>
+            <h1 class="title">You've got a sealed note</h1>
+            <p class="sub" id="reveal-sub">Tap the flap to open it.</p>
+
+            <div class= "reveal-flap" id="flap">
+                <div class="flap-tri"></div>
+                <p class= "flap-note">tap to break the seal</p>
+            </div>
+            <div class="letter" id="letter">
+                <p class="letter-body" id="letter-body"></p>
+                <p class="letter-from" id="letter-from"></p>
+            </div>
+
+            <button class=" new-note" id="write-back">Write your own →</button>
+
+            <p class="maker-credit">
+  Made by <a href="https://instagram.com/Chalimuss18" target="_blank" rel="noopener">BlinklessBloom</a></p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
